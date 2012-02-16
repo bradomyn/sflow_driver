@@ -1,0 +1,28 @@
+
+The headers have been derived from what is in svn:
+documentation/specifications/hdlspec/memory_map/
+
+In that directory you find the html generated from the wb files.
+Here I import the relevant headers.  The overall register
+map is in ../nic/nic-hardware.h .
+
+The .wb files whence the headers are generated come from different
+plases in the white rabbit svn. To ease myself I wrote this in
+the Makefile. You can "make wbinput" to get a fresh copy of them,
+provided you have SVN set in your environment (point to the root
+checkout, before "trunk" subdirectory). If unset or wrong, cp fails.
+
+With "make headers" you can regenerate the headers from the wb input
+files. Each generated file is postprocesses with sed to fix these
+issues:
+
+* generated files include <inttypes.h> as they use uint32_t.  We want
+<linux/types.h> instead, as no <inttypes.h> nor <stdint.h> is there
+
+* generated files include the date of creation. This brings to noise
+in the "git diff" or plain "diff", so I'd better have no date.
+
+* creation of "#ifdef __THIS_HEADER__" fails on the dash, so I remove
+the dash and trailing part with sed (as of writing, it has issues with
+pathnames too, this is one the reasons why I copy the wb here first).
+

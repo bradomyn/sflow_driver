@@ -1,0 +1,65 @@
+-- -*- Mode: LUA; tab-width: 2 -*-
+
+peripheral {
+	 name = "DMTD PHY Calibrator";
+	 prefix = "dpc";
+	 hdl_entity = "dmtd_calibrator_wb";
+
+	 reg {
+			name = "Control Register";
+			prefix = "CR";
+
+			field {
+				 name = "Enable";
+				 type = BIT;
+				 prefix = "EN";
+				 access_dev = READ_ONLY;
+				 access_bus = READ_WRITE;
+			};
+
+			field {
+				 name = "Compare clock select";
+				 prefix = "IN_SEL";
+				 type = SLV;
+				 size = 4;
+				 align = 8;
+				 access_dev = READ_ONLY;
+				 access_bus = READ_WRITE;
+			};
+
+			field {
+				 name = "DMTD averaging samples";
+				 prefix = "N_AVG";
+				 type = SLV;
+				 size = 12;
+				 align = 16;
+				 access_dev = READ_ONLY;
+				 access_bus = READ_WRITE;
+			};
+	 };
+
+	 reg {
+			name = "Status register";
+			prefix = "SR";
+
+			field {
+				 name = "Phase shift value";
+				 prefix = "PS_VAL";
+				 size = 24;
+				 type = SLV;
+				 access_dev = WRITE_ONLY;
+				 access_bus = READ_ONLY;
+			};
+
+			field {
+				 name = "Phase shift value ready";
+				 prefix = "PS_RDY";
+				 type = BIT;
+				 load = LOAD_EXT;
+				 access_dev = READ_WRITE;
+				 access_bus = READ_WRITE;
+			};
+	 };
+};
+
+
