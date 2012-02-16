@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ARCH	Makefile	/^export ARCH ?= arm$/;"	m
+CROSS_COMPILE	Makefile	/^export CROSS_COMPILE ?= $(CROSS_COMPILE_ARM)$/;"	m
+DRV_MODULE_VERSION	wr_sflow.c	/^MODULE_VERSION(DRV_MODULE_VERSION);$/;"	v
+DRV_MODULE_VERSION	wr_sflow.c	48;"	d	file:
+FPGA_BASE_SFLOW	wr_sflow.c	53;"	d	file:
+LINUX	Makefile	/^LINUX           ?= ..\/..\/..\/kernel$/;"	m
+WRVIC_BASE_IRQ	wr_sflow.c	51;"	d	file:
+WR_FLAG_IRQDISABLE	wr_sflow.c	60;"	d	file:
+WR_SFLOW_IRQ	wr_sflow.c	50;"	d	file:
+WR_SFLW_IRQENA	wr_sflow.h	7;"	d
+WR_SFLW_IRQWAIT	wr_sflow.h	6;"	d
+__WR_IOC_MAGIC	wr_sflow.h	4;"	d
+__WR_SFLOW_H	wr_sflow.h	2;"	d
+clean	Makefile	/^clean:$/;"	t
+dev	wr_sflow.c	/^static struct wr_sflow_dev dev;$/;"	v	typeref:struct:wr_sflow_dev	file:
+flags	wr_sflow.c	/^	unsigned long		flags;$/;"	m	struct:wr_sflow_dev	file:	access:public
+lock	wr_sflow.c	/^	spinlock_t		    lock;$/;"	m	struct:wr_sflow_dev	file:	access:public
+obj-m	Makefile	/^obj-m           := wr_rtu.o$/;"	m
+obj-m	Makefile	/^obj-m           := wr_rtu.o$/;"	t
+q	wr_sflow.c	/^	wait_queue_head_t	q;$/;"	m	struct:wr_sflow_dev	file:	access:public
+regs	wr_sflow.c	/^static struct RTU_WB __iomem *regs; \/\/ask the mapping for the sflow$/;"	v	typeref:struct:__iomem	file:
+sFlow_ufifo_is_empty	wr_sflow.c	/^static int sFlow_ufifo_is_empty(void)$/;"	f	file:	signature:(void)
+wr_sFlow_clear_irq	wr_sflow.c	/^static void wr_sFlow_clear_irq(void)$/;"	f	file:	signature:(void)
+wr_sFlow_disable_irq	wr_sflow.c	/^static void wr_sFlow_disable_irq(void)$/;"	f	file:	signature:(void)
+wr_sFlow_enable_irq	wr_sflow.c	/^static void wr_sFlow_enable_irq(void)$/;"	f	file:	signature:(void)
+wr_sFlow_exit	wr_sflow.c	/^module_exit(wr_sFlow_exit);$/;"	v
+wr_sFlow_exit	wr_sflow.c	/^static void __exit wr_sFlow_exit(void)$/;"	f	file:	signature:(void)
+wr_sFlow_fops	wr_sflow.c	/^static struct file_operations wr_sFlow_fops = {$/;"	v	typeref:struct:file_operations	file:
+wr_sFlow_init	wr_sflow.c	/^module_init(wr_sFlow_init);$/;"	v
+wr_sFlow_init	wr_sflow.c	/^static int __init wr_sFlow_init(void)$/;"	f	file:	signature:(void)
+wr_sFlow_interrupt	wr_sflow.c	/^static irqreturn_t wr_sFlow_interrupt(int irq, void *unused)$/;"	f	file:	signature:(int irq, void *unused)
+wr_sFlow_ioctl	wr_sflow.c	/^static long wr_sFlow_ioctl(struct file *f, unsigned int cmd, unsigned long arg)$/;"	f	file:	signature:(struct file *f, unsigned int cmd, unsigned long arg)
+wr_sFlow_misc	wr_sflow.c	/^static struct miscdevice wr_sFlow_misc = {$/;"	v	typeref:struct:miscdevice	file:
+wr_sFlow_readl	wr_sflow.c	66;"	d	file:
+wr_sFlow_writel	wr_sflow.c	67;"	d	file:
+wr_sflow_dev	wr_sflow.c	/^struct wr_sflow_dev {$/;"	s	file:
+wr_sflow_dev::flags	wr_sflow.c	/^	unsigned long		flags;$/;"	m	struct:wr_sflow_dev	file:	access:public
+wr_sflow_dev::lock	wr_sflow.c	/^	spinlock_t		    lock;$/;"	m	struct:wr_sflow_dev	file:	access:public
+wr_sflow_dev::q	wr_sflow.c	/^	wait_queue_head_t	q;$/;"	m	struct:wr_sflow_dev	file:	access:public
