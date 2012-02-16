@@ -1,0 +1,22 @@
+White Rabbit Switch Routing Table Unit driver v1.0, based on IEEE 
+Standards 802.1D-2004 and 802.1Q-2003
+
+Authors:    Juan Luis Manas (juan.manas@integrasys.es)
+            Miguel Baizan   (miguel.baizan@integrasys-sa.com)
+
+Based on code by Alessandro Rubini and Tomasz Wlostowski.
+
+Short info: Loadable module in kernel space, which handles UFIFO IRQs (RTU IRQ 
+            registration, capture and handling).
+
+
+
+This module applies gnurabbit (http://www.ohwr.org) misc device concepts to 
+make RTU UFIFO interrupts available to user space. It depends on the "wrminic" 
+and "wrvic" drivers developed by Alessandro Rubini at his wr-switch-software 
+project (git://gnudd.com/wr-switch-software.git).
+
+It also depends on the definitions made in wrsw_rtu_wb.h.
+
+For compilation and installation instructions, read the README file in the
+"wrsw_rtud" package (placed at software/wrsw_rtud).
